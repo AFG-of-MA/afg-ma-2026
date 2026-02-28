@@ -22,7 +22,12 @@
                     "slug": "contrast"
                 },
                 {
-                    "color": "#F47C48",
+                    "color": "#3F83C8",
+                    "name": "Primary",
+                    "slug": "primary"
+                },
+                {
+                    "color": "#F5F5F5",
                     "name": "Accent 1",
                     "slug": "accent-1"
                 },
