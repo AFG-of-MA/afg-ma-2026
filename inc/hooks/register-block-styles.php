@@ -14,11 +14,14 @@ namespace WebDevStudios\wdsbt;
 function register_block_styles() {
 
 	$block_styles = array(
-		'core/button' => array(
+		'core/button'    => array(
 			'minimal' => __( 'Minimal', 'wdsbt' ),
 			'text'    => __( 'Text Only', 'wdsbt' ),
 		),
-		'core/quote'  => array(
+		'core/quote'     => array(
+			'large' => __( 'Large', 'wdsbt' ),
+		),
+		'core/paragraph' => array(
 			'large' => __( 'Large', 'wdsbt' ),
 		),
 	);
