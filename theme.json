@@ -420,6 +420,13 @@
             "title": "Page: Blank"
         },
         {
+            "name": "page-hero-image",
+            "postTypes": [
+                "page"
+            ],
+            "title": "Page: Hero Image"
+        },
+        {
             "name": "page-no-title",
             "postTypes": [
                 "page"
