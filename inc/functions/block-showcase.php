@@ -222,7 +222,45 @@ function render_block_for_showcase( $block_name, $block_type ) {
 		return '';
 	}
 
-	$skip_blocks = array( 'core/legacy-widget', 'core/freeform' );
+	// Skip blocks that cannot be rendered without specific context.
+	$skip_blocks = array(
+		'core/legacy-widget',
+		'core/freeform',
+		// WooCommerce blocks that require product context.
+		'woocommerce/add-to-cart-with-options',
+		'woocommerce/product-price',
+		'woocommerce/product-rating',
+		'woocommerce/product-button',
+		'woocommerce/product-image',
+		'woocommerce/product-title',
+		'woocommerce/product-summary',
+		'woocommerce/product-sku',
+		'woocommerce/product-category-list',
+		'woocommerce/product-tag-list',
+		'woocommerce/product-stock-indicator',
+		'woocommerce/product-sale-badge',
+		'woocommerce/product-meta',
+		'woocommerce/product-details',
+		'woocommerce/add-to-cart-form',
+		'woocommerce/single-product',
+	);
+
+	// Check for any WooCommerce block that starts with specific patterns.
+	$skip_patterns = array(
+		'woocommerce/product-',
+		'woocommerce/single-product',
+		'woocommerce/cart-',
+		'woocommerce/checkout-',
+		'woocommerce/mini-cart',
+		'woocommerce/add-to-cart-',
+	);
+
+	foreach ( $skip_patterns as $pattern ) {
+		if ( strpos( $block_name, $pattern ) === 0 ) {
+			return '<p><em>This WooCommerce block requires specific product or cart context and cannot be previewed in the showcase.</em></p>';
+		}
+	}
+
 	if ( in_array( $block_name, $skip_blocks, true ) ) {
 		return '<p><em>This block type cannot be previewed in the showcase.</em></p>';
 	}
@@ -329,9 +367,38 @@ function render_block_for_showcase( $block_name, $block_type ) {
 		}
 	}
 
-	$rendered = do_blocks( $block_content );
+	// Wrap block rendering in error handling to prevent fatal errors.
+	ob_start();
+	try {
+		$rendered = do_blocks( $block_content );
+		$output   = ob_get_clean();
 
-	return $rendered;
+		// Check if rendering produced output.
+		if ( ! empty( $rendered ) ) {
+			return $rendered;
+		} elseif ( ! empty( $output ) ) {
+			return $output;
+		}
+
+		// If no output, return a message.
+			return '<p><em>This block could not be rendered in the showcase.</em></p>';
+	} catch ( \Exception $e ) {
+		ob_end_clean();
+		// Log the error for debugging.
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG && defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG ) {
+			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+			error_log( sprintf( 'Block Showcase Error for %s: %s', $block_name, $e->getMessage() ) );
+		}
+		return '<p><em>This block encountered an error and cannot be previewed in the showcase.</em></p>';
+	} catch ( \Error $e ) {
+		ob_end_clean();
+		// Log the error for debugging.
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG && defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG ) {
+			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+			error_log( sprintf( 'Block Showcase Fatal Error for %s: %s', $block_name, $e->getMessage() ) );
+		}
+		return '<p><em>This block encountered a fatal error and cannot be previewed in the showcase.</em></p>';
+	}
 }
 
 /**
