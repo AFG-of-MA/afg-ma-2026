@@ -36,21 +36,21 @@ a {
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
 	text-underline-offset: 0.15em;
-	color: var(--wp--preset--color--accent-1);
+	color: var(--wp--preset--color--primary);
 
 	&:hover {
-		color: var(--wp--preset--color--accent-3);
+		// color: var(--wp--preset--color--accent-3);
 		text-decoration-thickness: 2px;
 	}
 
 	&:focus {
-		color: var(--wp--preset--color--accent-3);
-		outline: 2px solid var(--wp--preset--color--accent-3);
+		// color: var(--wp--preset--color--accent-3);
+		outline: 2px solid var(--wp--preset--color--primary);
 		outline-offset: 2px;
 	}
 
 	&:visited {
-		color: var(--wp--preset--color--accent-1);
+		color: var(--wp--preset--color--primary);
 
 		&:hover {
 			color: var(--wp--preset--color--accent-3);

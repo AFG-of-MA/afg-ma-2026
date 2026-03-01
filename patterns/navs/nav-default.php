@@ -38,10 +38,10 @@ wp:group {
 			"ref":2461,
 			"layout":{
 				"type":"default",
-				"allowSizingOnChildren":false,
-				"open"
+				"allowSizingOnChildren":false
 			},
-			"openSubmenusOnClick":true,
+			"fontSize":"medium",
+			"interactivity": false,
 			"overlayMenu":"mobile"
 		} /-->
 	</div><!-- /wp:group -->
