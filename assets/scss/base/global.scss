@@ -1,3 +1,5 @@
+@use '../abstracts/responsive-mixins';
+
 /* -- Defaults -- */
 *,
 *::before,
@@ -67,4 +69,43 @@ a {
 	.lightbox-trigger {
 		top: 1rem !important; /* stylelint-disable-line declaration-no-important */
 	}
+}
+
+/** Grid layout **/
+
+.wp-site-blocks {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	@include responsive-mixins.responsive-min(1024px) {
+		grid-template-columns: 20rem 1fr;
+		align-items: flex-start;
+	}
+}
+
+.site-nav {
+
+	@include responsive-mixins.responsive-min(1024px) {
+		grid-row: span 2 / span 2;
+	}
+}
+
+main {
+	margin-top: 0;
+
+	@include responsive-mixins.responsive-min(1024px) {
+		grid-column-start: 2;
+	}
+}
+
+.site-footer {
+
+	@include responsive-mixins.responsive-min(1024px) {
+		grid-column-start: 2;
+	}
+}
+
+.debug {
+	/* stylelint-disable-next-line color-named */
+	outline: 5px solid red;
 }
