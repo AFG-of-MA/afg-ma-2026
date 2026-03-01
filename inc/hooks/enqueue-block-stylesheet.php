@@ -27,6 +27,11 @@ function enqueue_block_stylesheet() {
 		$handle     = 'wdsbt-' . $block_name . '-style';
 		$ver        = file_exists( $stylesheet ) ? (string) filemtime( $stylesheet ) : wp_get_theme( get_template() )->get( 'Version' );
 
+		// Skip RTL variants (e.g. navigation-rtl.css); WordPress handles these automatically
+		if ( str_contains( $block_name, '-rtl' ) ) {
+			continue;
+		}
+
 		wp_enqueue_block_style(
 			'core/' . $block_name,
 			array(
