@@ -1,9 +1,7 @@
 /* -- Archive Pages -- */
 
 .archive {
-
 	.wp-block-post {
-
 		.wp-block-post-title {
 			font-size: 1.375rem;
 			margin-bottom: 0;
@@ -11,9 +9,8 @@
 		}
 
 		.wp-block-post-terms {
-
 			a {
-				font-family: var(--wp--preset--font-family--headline);
+				font-family: var(--wp--preset--font-family--default);
 				font-size: 0.75rem;
 				font-weight: 500;
 

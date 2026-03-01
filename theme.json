@@ -112,7 +112,7 @@
             "fontFamilies": [
                 {
                     "name": "Lato",
-                    "slug": "lato",
+                    "slug": "default",
                     "fontFamily": "Lato, sans-serif",
                     "fontFace": [
                         {
@@ -120,7 +120,7 @@
                             "fontStyle": "italic",
                             "fontWeight": "700",
                             "src": [
-                                "file:./assets/fonts/body/lato/lato-v25-latin-700-italic.woff2"
+                                "file:./build/fonts/default/lato-v25-latin-700-italic.woff2"
                             ]
                         },
                         {
@@ -128,7 +128,7 @@
                             "fontStyle": "normal",
                             "fontWeight": "100",
                             "src": [
-                                "file:./assets/fonts/body/lato/lato-v25-latin-100.woff2"
+                                "file:./build/fonts/default/lato-v25-latin-100.woff2"
                             ]
                         },
                         {
@@ -136,7 +136,7 @@
                             "fontStyle": "normal",
                             "fontWeight": "900",
                             "src": [
-                                "file:./assets/fonts/body/lato/lato-v25-latin-900.woff2"
+                                "file:./build/fonts/default/lato-v25-latin-900.woff2"
                             ]
                         },
                         {
@@ -144,7 +144,7 @@
                             "fontStyle": "italic",
                             "fontWeight": "900",
                             "src": [
-                                "file:./assets/fonts/body/lato/lato-v25-latin-900-italic.woff2"
+                                "file:./build/fonts/default/lato-v25-latin-900-italic.woff2"
                             ]
                         },
                         {
@@ -152,7 +152,7 @@
                             "fontStyle": "italic",
                             "fontWeight": "100",
                             "src": [
-                                "file:./assets/fonts/body/lato/lato-v25-latin-100-italic.woff2"
+                                "file:./build/fonts/default/lato-v25-latin-100-italic.woff2"
                             ]
                         },
                         {
@@ -160,7 +160,7 @@
                             "fontStyle": "normal",
                             "fontWeight": "400",
                             "src": [
-                                "file:./assets/fonts/body/lato/lato-v25-latin-regular.woff2"
+                                "file:./build/fonts/default/lato-v25-latin-regular.woff2"
                             ]
                         },
                         {
@@ -168,7 +168,7 @@
                             "fontStyle": "italic",
                             "fontWeight": "300",
                             "src": [
-                                "file:./assets/fonts/body/lato/lato-v25-latin-300-italic.woff2"
+                                "file:./build/fonts/default/lato-v25-latin-300-italic.woff2"
                             ]
                         },
                         {
@@ -176,7 +176,7 @@
                             "fontStyle": "normal",
                             "fontWeight": "300",
                             "src": [
-                                "file:./assets/fonts/body/lato/lato-v25-latin-300.woff2"
+                                "file:./build/fonts/default/lato-v25-latin-300.woff2"
                             ]
                         },
                         {
@@ -184,7 +184,7 @@
                             "fontStyle": "normal",
                             "fontWeight": "700",
                             "src": [
-                                "file:./assets/fonts/body/lato/lato-v25-latin-700.woff2"
+                                "file:./build/fonts/default/lato-v25-latin-700.woff2"
                             ]
                         },
                         {
@@ -192,53 +192,7 @@
                             "fontStyle": "italic",
                             "fontWeight": "400",
                             "src": [
-                                "file:./assets/fonts/body/lato/lato-v25-latin-italic.woff2"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Oxygen",
-                    "slug": "body",
-                    "fontFamily": "Oxygen, sans-serif",
-                    "fontFace": [
-                        {
-                            "fontFamily": "Oxygen",
-                            "fontStyle": "normal",
-                            "fontWeight": "300",
-                            "src": [
-                                "file:./assets/fonts/body/oxygen-v15-latin-300.woff2"
-                            ]
-                        },
-                        {
-                            "fontFamily": "Oxygen",
-                            "fontStyle": "normal",
-                            "fontWeight": "700",
-                            "src": [
-                                "file:./assets/fonts/body/oxygen-v15-latin-700.woff2"
-                            ]
-                        },
-                        {
-                            "fontFamily": "Oxygen",
-                            "fontStyle": "normal",
-                            "fontWeight": "400",
-                            "src": [
-                                "file:./assets/fonts/body/oxygen-v15-latin-regular.woff2"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Inter",
-                    "slug": "headline",
-                    "fontFamily": "Inter, sans-serif",
-                    "fontFace": [
-                        {
-                            "fontFamily": "Inter",
-                            "fontStyle": "normal",
-                            "fontWeight": "400",
-                            "src": [
-                                "file:./assets/fonts/headline/Inter.woff2"
+                                "file:./build/fonts/default/lato-v25-latin-italic.woff2"
                             ]
                         }
                     ]
@@ -253,7 +207,7 @@
                             "fontStyle": "normal",
                             "fontWeight": "400",
                             "src": [
-                                "file:./assets/fonts/mono/roboto-mono.woff2"
+                                "file:./build/fonts/mono/roboto-mono.woff2"
                             ]
                         }
                     ]
@@ -350,7 +304,7 @@
         "blocks": {
             "core/heading": {
                 "typography": {
-                    "fontFamily": "var:preset|font-family|headline",
+                    "fontFamily": "var:preset|font-family|default",
                     "fontWeight": "400"
                 }
             },
@@ -377,7 +331,7 @@
             },
             "core/post-title": {
                 "typography": {
-                    "fontFamily": "var:preset|font-family|headline",
+                    "fontFamily": "var:preset|font-family|default",
                     "fontSize": "var:preset|font-size|xx-large",
                     "fontWeight": "400"
                 }
@@ -397,7 +351,7 @@
             "blockGap": "var:preset|spacing|0"
         },
         "typography": {
-            "fontFamily": "var:preset|font-family|body",
+            "fontFamily": "var:preset|font-family|default",
             "fontSize": "var:preset|font-size|medium",
             "fontWeight": "400"
         }

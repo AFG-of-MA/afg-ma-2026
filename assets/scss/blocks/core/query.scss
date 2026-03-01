@@ -37,7 +37,7 @@
 
 			.wp-block-post-title {
 				color: var(--wp--preset--color--black);
-				font-family: var(--wp--preset--font-family--body);
+				font-family: var(--wp--preset--font-family--default);
 				font-size: var(--wp--preset--font-size--large);
 				margin-bottom: var(--wp--preset--spacing--20);
 				margin-top: var(--wp--preset--spacing--20);
@@ -59,7 +59,7 @@
 
 			.wp-block-post-date {
 				color: var(--wp--preset--color--accent-1);
-				font-family: var(--wp--preset--font-family--body);
+				font-family: var(--wp--preset--font-family--default);
 				display: block;
 				font-size: var(--wp--preset--font-size--small);
 				margin-top: 0 !important;
@@ -76,7 +76,7 @@
 				.wp-block-post-author-name__link {
 					color: var(--wp--preset--color--black);
 					display: block;
-					font-family: var(--wp--preset--font-family--body);
+					font-family: var(--wp--preset--font-family--default);
 					font-size: var(--wp--preset--font-size--small);
 					margin-top: 0.5rem;
 					padding-bottom: 0;
@@ -91,7 +91,7 @@
 
 			.wp-block-post-excerpt {
 				color: var(--wp--preset--color--contrast);
-				font-family: var(--wp--preset--font-family--body);
+				font-family: var(--wp--preset--font-family--default);
 				font-size: var(--wp--preset--font-size--medium);
 				margin-bottom: var(--wp--preset--spacing--20);
 				margin-top: var(--wp--preset--spacing--20);
@@ -107,7 +107,7 @@
 					.wp-block-post-excerpt__more-link {
 						color: var(--wp--preset--color--contrast);
 						display: block;
-						font-family: var(--wp--preset--font-family--body);
+						font-family: var(--wp--preset--font-family--default);
 						font-size: var(--wp--preset--font-size--small);
 						font-weight: 300;
 						padding-top: 1rem;
@@ -132,7 +132,7 @@
 
 	.wp-block-query-title {
 		color: var(--wp--preset--color--black);
-		font-family: var(--wp--preset--font-family--headline);
+		font-family: var(--wp--preset--font-family--default);
 		font-size: var(--wp--preset--font-size--x-large);
 		margin-bottom: var(--wp--preset--spacing--30);
 		margin-top: var(--wp--preset--spacing--30);

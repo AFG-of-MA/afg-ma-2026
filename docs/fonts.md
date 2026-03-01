@@ -1,6 +1,6 @@
 # Font Management
 
-Fonts are organized by purpose under `assets/fonts/`: `headline/`, `body/`, `mono/`. The processor copies them to `build/fonts/`, updates `inc/setup/font-preload.php`, and writes font families into `theme.json` with slugs `headline`, `body`, `mono`. Use in SCSS as `var(--wp--preset--font-family--headline)` etc.
+Fonts are organized by purpose under `assets/fonts/`: `default/`, `mono/`. The processor copies them to `build/fonts/`, updates `inc/setup/font-preload.php`, and writes font families into `theme.json` with slugs `default`, `mono`. Use in SCSS as `var(--wp--preset--font-family--default)` etc.
 
 ## Commands
 
@@ -10,7 +10,7 @@ Fonts are organized by purpose under `assets/fonts/`: `headline/`, `body/`, `mon
 
 ## Workflow
 
-1. Place font files in the correct folder (`headline/`, `body/`, `mono/`).
+1. Place font files in the correct folder (`default/`, `mono/`).
 2. Run `npm run fonts`.
 3. Check `build/fonts/`, `inc/setup/font-preload.php`, and `theme.json`.
 
@@ -20,4 +20,4 @@ Family, weight, and style are inferred from folder and filename (e.g. weights 10
 
 ## Debug (WP_DEBUG)
 
-When `WP_DEBUG` is true, the WDSBT Settings page can show font detection debug: counts, families, variants. If fonts don’t appear, confirm folder names and supported extensions (e.g. `.woff2`, `.woff`), and run `npm run fonts:detect`.
+When `WP_DEBUG` is true, the WDSBT Settings page can show font detection debug: counts, families, variants. If fonts don't appear, confirm folder names and supported extensions (e.g. `.woff2`, `.woff`), and run `npm run fonts:detect`.

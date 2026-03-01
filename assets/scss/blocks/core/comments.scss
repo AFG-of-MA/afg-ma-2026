@@ -9,7 +9,7 @@
 	.wp-block-comment-author-name {
 		a {
 			color: var(--wp--preset--color--black);
-			font-family: var(--wp--preset--font-family--headline);
+			font-family: var(--wp--preset--font-family--default);
 			font-weight: 700;
 			text-decoration: none;
 		}
@@ -18,7 +18,7 @@
 	.wp-block-comment-date {
 		a {
 			color: var(--wp--preset--color--black);
-			font-family: var(--wp--preset--font-family--headline);
+			font-family: var(--wp--preset--font-family--default);
 			font-weight: 500;
 			text-decoration: none;
 		}
@@ -28,7 +28,7 @@
 	.wp-block-comment-reply-link {
 		a {
 			color: var(--wp--preset--color--contrast);
-			font-family: var(--wp--preset--font-family--headline);
+			font-family: var(--wp--preset--font-family--default);
 			text-decoration: none;
 
 			&:hover,

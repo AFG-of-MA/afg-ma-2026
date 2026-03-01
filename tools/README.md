@@ -28,7 +28,7 @@ assets/fonts/
 1. Place fonts in the appropriate purpose folder (`headline/`, `body/`, `mono/`)
 2. The processor detects the purpose from the folder name
 3. Maps to standardized slugs in theme.json
-4. Generates correct CSS custom properties: `var(--wp--preset--font-family--headline)`, `var(--wp--preset--font-family--body)`, `var(--wp--preset--font-family--mono)`
+4. Generates correct CSS custom properties: `var(--wp--preset--font-family--default)`, `var(--wp--preset--font-family--default)`, `var(--wp--preset--font-family--mono)`
 
 **To change fonts:**
 - **Headlines**: Replace files in `headline/` folder
