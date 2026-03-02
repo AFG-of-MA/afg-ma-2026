@@ -1,0 +1,27 @@
+/**
+ * Site Logo Block Styles
+ *
+ * Hides the resizable box handles in the block editor.
+ */
+
+// Hide resize handles in the editor
+.wdsbt-site-logo-no-resize {
+	.components-resizable-box__handle {
+		/* stylelint-disable-next-line declaration-no-important */
+		display: none !important;
+	}
+
+	.components-resizable-box__side-handle {
+		/* stylelint-disable-next-line declaration-no-important */
+		display: none !important;
+	}
+
+	.components-resizable-box__container {
+		pointer-events: none;
+	}
+}
+
+// Ensure the site logo block itself remains interactive
+.wdsbt-site-logo-no-resize .wp-block-site-logo {
+	pointer-events: auto;
+}

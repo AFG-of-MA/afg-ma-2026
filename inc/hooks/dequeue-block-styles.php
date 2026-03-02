@@ -17,10 +17,31 @@ namespace WebDevStudios\wdsbt;
  * @return void
  */
 function dequeue_core_block_styles() {
-	// Dequeue navigation block styles (includes hover/submenu behavior).
 	wp_dequeue_style( 'wp-block-navigation' );
-
-	// Deregister to prevent re-enqueueing.
-	wp_deregister_style( 'wp-block-navigation' );
+	wp_dequeue_style( 'wp-block-site-logo' );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\dequeue_core_block_styles', 100 );
+
+/**
+ * Remove default block styles from the Block Editor and Site Editor
+ *
+ * https://fullsiteediting.com/lessons/how-to-remove-default-block-styles/
+ *
+ * @return void
+ */
+add_action(
+	'wp_default_styles',
+	function ( $styles ) {
+		$handles = [ 'wp-block-library', 'wp-block-library-theme' ];
+
+		foreach ( $handles as $handle ) {
+			$style = $styles->query( $handle, 'registered' );
+			if ( ! $style ) {
+				continue;
+			}
+			$styles->remove( $handle );
+			$styles->add( $handle, false, [] );
+		}
+	},
+	PHP_INT_MAX
+);

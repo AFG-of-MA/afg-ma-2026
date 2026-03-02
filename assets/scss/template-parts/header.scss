@@ -3,7 +3,6 @@
 /* -- Header -- */
 
 /* -- Header Search -- */
-.is-root-container,
 .site-header {
 	background-color: var(--wp--custom--header-background--background);
 	color: var(--wp--custom--header-text--color);
@@ -12,7 +11,10 @@
 		min-height 0.2s ease,
 		background-color 0.2s ease,
 		padding 0.2s ease;
+}
 
+.is-root-container,
+.site-header {
 	.header-container {
 		.wp-block-site-logo {
 			max-width: 12.5rem;

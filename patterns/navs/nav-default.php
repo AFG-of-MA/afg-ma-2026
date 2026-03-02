@@ -9,7 +9,7 @@
  */
 
 // Determine whether to display site logo or site title.
-$wdsbt_site_info = has_custom_logo() ? '<!-- wp:site-logo {"width":150,"shouldSyncIcon":true,"style":{"layout":{"selfStretch":"fit","flexSize":null}}} /-->' : '<!-- wp:site-title /-->';
+$wdsbt_site_info = has_custom_logo() ? '<!-- wp:site-logo {"align":"full","shouldSyncIcon":true} /-->' : '<!-- wp:site-title /-->';
 ?>
 
 <!--
@@ -25,7 +25,15 @@ wp:group {
 	}
 } -->
 <div id="top" class="wp-block-group">
-	<?php echo wp_kses_post( $wdsbt_site_info ); ?>
+	<!--
+	wp:group {
+		"metadata": {
+			"name": "Logo"
+		}
+	} -->
+	<div class="wp-block-group site-nav-logo">
+		<?php echo wp_kses_post( $wdsbt_site_info ); ?>
+	</div><!-- /wp:group -->
 	<!--
 	wp:group {
 		"metadata": {
