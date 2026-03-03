@@ -15,6 +15,10 @@ namespace WebDevStudios\wdsbt;
 define( 'WebDevStudios\wdsbt\ROOT_PATH', trailingslashit( get_template_directory() ) );
 define( 'WebDevStudios\wdsbt\ROOT_URL', trailingslashit( get_template_directory_uri() ) );
 
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+define( 'SCRIPT_DEBUG', true );
+
 /**
  * Get all the include files for the theme.
  *
