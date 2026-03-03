@@ -1,0 +1,10 @@
+.wp-block-post-title {
+	&::after {
+		content: '';
+		display: block;
+		margin-block-start: 1.25rem;
+		width: 5rem;
+		height: 0.25rem;
+		background-color: var(--wp--preset--color--primary);
+	}
+}
