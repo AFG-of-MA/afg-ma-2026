@@ -73,7 +73,7 @@ a {
 
 /** Grid layout **/
 
-.wp-site-blocks {
+.site-layout {
 	display: grid;
 	grid-template-columns: 1fr;
 
@@ -86,6 +86,7 @@ a {
 .site-nav {
 
 	@include responsive-mixins.responsive-min(1024px) {
+		height: 100%;
 		grid-row: span 2 / span 2;
 	}
 }

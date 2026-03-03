@@ -4,6 +4,16 @@
 /* stylelint-disable selector-class-pattern, declaration-no-important */
 
 /* -- Navigation -- */
+.site-nav {
+	box-shadow:
+		rgba(0, 0, 0, 0) 0 0 0 0,
+		rgba(0, 0, 0, 0) 0 0 0 0,
+		rgba(0, 0, 0, 0) 0 0 0 0,
+		rgba(0, 0, 0, 0) 0 0 0 0,
+		rgba(0, 0, 0, 0.1) 0 4px 6px -1px,
+		rgba(0, 0, 0, 0.1) 0 2px 4px -2px;
+}
+
 .site-nav-logo {
 	padding: 0.75rem;
 	background-color: var(--wp--preset--color--primary);
