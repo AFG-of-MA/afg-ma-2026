@@ -1,0 +1,16 @@
+:root {
+	--site-padding: 1rem;
+
+	@media (width >= 64rem) {
+		--site-padding: 2rem;
+	}
+}
+
+@mixin site-padding {
+	padding-inline: var(--site-padding);
+}
+
+@mixin site-padding-unwrap {
+	margin-inline: calc(-1 * var(--site-padding));
+	// width: calc((2 * var(--site-padding)) + 100%);
+}

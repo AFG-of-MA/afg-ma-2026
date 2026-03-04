@@ -1,6 +1,12 @@
 @use './index';
+@use './abstracts/layout';
 
 /* -- Editor Styles -- */
 .block-editor-block-list__block [contenteditable] {
 	display: inline;
+}
+
+.editor-styles-wrapper {
+
+	@include layout.site-padding;
 }

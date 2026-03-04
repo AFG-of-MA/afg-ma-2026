@@ -1,3 +1,12 @@
+@use '../abstracts/layout';
+
+.interface-interface-skeleton__content,
 .site-content {
-	padding-inline: 3.5rem;
+
+	@include layout.site-padding;
+}
+
+.wp-block-post-featured-image {
+
+	@include layout.site-padding-unwrap;
 }

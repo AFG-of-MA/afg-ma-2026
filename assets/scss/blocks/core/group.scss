@@ -1,7 +1,12 @@
 /* -- group -- */
 
+@use '../../abstracts/layout';
+
 .wp-block-group {
-	.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow & {
-		margin-block-start: var(--wp--preset--spacing--30);
+	// Pulls the background to the edge of the content
+	.entry-content > &.has-background {
+
+		@include layout.site-padding-unwrap;
+		margin-block: 2rem;
 	}
 }

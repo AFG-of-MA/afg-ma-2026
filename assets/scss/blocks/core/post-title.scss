@@ -1,4 +1,8 @@
-.wp-block-post-title {
+// Specificity required to override margin added by :root :where(.is-layout-flow) > :last-child
+.wp-block-post-title.wp-block-post-title.wp-block-post-title {
+	margin-block-start: 2rem;
+	margin-block-end: 3rem;
+
 	&::after {
 		content: '';
 		display: block;
