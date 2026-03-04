@@ -321,7 +321,7 @@
             }
         },
         "blocks": {
-            "core/post-title": {},
+            "core/post-title": [],
             "core/heading": {
                 "typography": {
                     "fontFamily": "var:preset|font-family|default",
