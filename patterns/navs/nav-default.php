@@ -12,21 +12,14 @@
 $wdsbt_site_info = has_custom_logo() ? '<!-- wp:site-logo {"align":"full","shouldSyncIcon":true} /-->' : '<!-- wp:site-title /-->';
 ?>
 
-<!--
-wp:group {
+<!-- wp:group {
 	"layout":{"type":"default"},
-	"templateLock":"all",
-	"lock": {
-		"move": true,
-		"remove": true
-	},
 	"metadata":{
 		"name":"Nav Inner"
 	}
 } -->
 <div id="top" class="wp-block-group">
-	<!--
-	wp:group {
+	<!-- wp:group {
 		"metadata": {
 			"name": "Logo"
 		}
@@ -34,15 +27,14 @@ wp:group {
 	<div class="wp-block-group site-nav-logo">
 		<?php echo wp_kses_post( $wdsbt_site_info ); ?>
 	</div><!-- /wp:group -->
-	<!--
-	wp:group {
+	<!-- wp:search {"label":"Search","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"showLabel":false,"placeholder":"Search"} /-->
+	<!-- wp:group {
 		"metadata": {
 			"name": "Menu"
 		}
 	} -->
 	<div class="wp-block-group">
-		<!--
-		wp:navigation {
+		<!-- wp:navigation {
 			"ref":2461,
 			"layout":{
 				"type":"default",

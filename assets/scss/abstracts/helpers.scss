@@ -1,5 +1,4 @@
 @mixin reset {
-	padding: unset;
-	margin: unset;
+	all: unset;
 	list-style: none;
 }

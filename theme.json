@@ -35,7 +35,7 @@
                     "slug": "accent-2"
                 },
                 {
-                    "color": "color-mix(in srgb, currentColor 80%, transparent)",
+                    "color": "color-mix(in oklab, currentColor 50%, transparent)",
                     "name": "Accent 3",
                     "slug": "accent-3"
                 },

@@ -19,13 +19,14 @@ namespace WebDevStudios\wdsbt;
 function dequeue_core_block_styles() {
 	wp_dequeue_style( 'wp-block-navigation' );
 	wp_dequeue_style( 'wp-block-site-logo' );
+	wp_dequeue_style( 'wp-block-search' );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\dequeue_core_block_styles', 100 );
 
 /**
  * Remove default block styles from the Block Editor and Site Editor
  *
- * https://fullsiteediting.com/lessons/how-to-remove-default-block-styles/
+ * Reference: https://fullsiteediting.com/lessons/how-to-remove-default-block-styles/
  *
  * @return void
  */
