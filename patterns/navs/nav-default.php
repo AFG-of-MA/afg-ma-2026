@@ -14,6 +14,11 @@ $wdsbt_site_info = has_custom_logo() ? '<!-- wp:site-logo {"align":"full","shoul
 
 <!-- wp:group {
 	"layout":{"type":"default"},
+	"templateLock":"all",
+	"lock": {
+		"move": true,
+		"remove": true
+	},
 	"metadata":{
 		"name":"Nav Inner"
 	}
